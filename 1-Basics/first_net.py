@@ -57,3 +57,8 @@ for i in range(100):
 
 # Save
 torch.save(net, 'my_net.pt')
+
+
+        """VSCode Extension : pytorch snippets
+        USAGE: pyt.... use for example pytorch:module
+        """

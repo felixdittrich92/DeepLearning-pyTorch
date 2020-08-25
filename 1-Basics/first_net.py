@@ -33,8 +33,8 @@ class Network(nn.Module):
 #net = net.cuda()
 
 # Load
-if os.path.isfile('my_net.pt'):
-    net = torch.load('my_net.pt')
+if os.path.isfile('models/my_net.pt'):
+    net = torch.load('models/my_net.pt')
 
 for i in range(100):
     x = [0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
@@ -56,9 +56,9 @@ for i in range(100):
     optimizer.step()
 
 # Save
-torch.save(net, 'my_net.pt')
+torch.save(net, 'models/my_net.pt')
 
 
-        """VSCode Extension : pytorch snippets
-        USAGE: pyt.... use for example pytorch:module
-        """
+"""VSCode Extension : pytorch snippets
+USAGE: pyt.... use for example pytorch:module
+"""

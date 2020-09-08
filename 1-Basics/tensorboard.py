@@ -1,9 +1,7 @@
 # pip3 install tensorboardX
 # pip3 install soundfile
 # tensorboard --logdir=runs
-# https://pytorch.org/tutorials/intermediate/tensorboard_tutorial.html#tensorboard-setup
-
-# demo.py
+# EXAMPLES: https://github.com/lanpa/tensorboardX/tree/master/examples
 
 import torch
 import torchvision.utils as vutils

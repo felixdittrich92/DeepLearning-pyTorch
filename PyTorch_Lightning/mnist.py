@@ -95,7 +95,7 @@ class MNISTModel(pl.LightningModule):
 mnist_model = MNISTModel()
 
 # most basic trainer, uses good defaults (1 gpu)
-trainer = pl.Trainer(gpus=1, auto_lr_find=True, show_progress_bar=True)    # min_epochs=1, max_epochs=1000
+trainer = pl.Trainer(gpus=0, auto_lr_find=True, show_progress_bar=True)    # min_epochs=1, max_epochs=1000
 trainer.fit(mnist_model)
 
 # https://pytorch-lightning.readthedocs.io/en/latest/advanced/transfer_learning.html

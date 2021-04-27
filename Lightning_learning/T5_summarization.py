@@ -146,19 +146,13 @@ class NewsSummaryModel(pl.LightningModule):
         self.model = T5ForConditionalGeneration.from_pretrained(MODEL_NAME, return_dict=True)
         
     def forward(self, input_ids, attention_mask, decoder_attention_mask, labels=None):
-        try:
-            loss, logits = self.model(input_ids, 
-                                attention_mask=attention_mask,
-                                labels=labels,
-                                decoder_attention_mask=decoder_attention_mask
-                                )
-            print(type(loss))
-            print(type(logits))
-            return loss, logits
-        except Exception as e:
-            import sys
-            print(str(e))
-            sys.exit(0)
+        loss, logits = self.model(input_ids, 
+                                  attention_mask=attention_mask,
+                                  labels=labels,
+                                  decoder_attention_mask=decoder_attention_mask
+                                  )
+
+        return loss, logits
     
     def training_step(self, batch, batch_idx):
         input_ids = batch["text_input_ids"]

@@ -95,7 +95,7 @@ class NewsSummaryDataModule(pl.LightningDataModule):
 
     def train_dataloader(self):
         return DataLoader(
-            self.test_dataset,
+            self.train_dataset,
             batch_size=self.batch_size,
             shuffle=False,
             num_workers=8

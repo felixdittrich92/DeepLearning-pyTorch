@@ -9,18 +9,16 @@ from torch.utils.data import Dataset, DataLoader
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
-from pytorch_lightning.metrics.functional import f1_score # ansehen wie im validation step
 from sklearn.model_selection import train_test_split
+
+# F1 Score ??
 
 from transformers import AdamW, BertForTokenClassification, BertTokenizerFast
 from tqdm.auto import tqdm
 
 data = pd.read_csv("Lightning_learning/ner_dataset.csv", encoding="latin1").fillna(method="ffill")
+print(data.head(20))
 # read txt file, split in token and label, one sentence ends after empty line
-
-class ConllDataset(Dataset):
-    
-    def __init__(self, data)
 
 class SentenceGetter(object):
 

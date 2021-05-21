@@ -7,9 +7,12 @@ from tqdm.notebook import tqdm
 
 torch.manual_seed(2020)
 
-print(torch.cuda.get_device_name(torch.cuda.current_device()))
-print(torch.cuda.is_available())
-print(torch.__version__)
+try:
+    print(torch.cuda.get_device_name(torch.cuda.current_device()))
+    print(torch.cuda.is_available())
+    print(torch.__version__)
+except:
+    print(torch.__version__)
 
 import pandas as pd
 import numpy as np
